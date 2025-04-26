@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('author');
             $table->text('category');
             $table->text('summary');
-            $table->text('status')->default('On-Shelf');
+            $table->string('status', 50)->default('On-Shelf');
             $table->string('img_path')->default('bookphoto.jpg');
             $table->timestamps();
         });
