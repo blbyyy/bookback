@@ -317,7 +317,7 @@
   <script src="{{ asset('assets/js/main.js')}}"></script>
   <script src="{{ asset('js/custom.js')}}"></script>
 
-  <script src="{{ asset('js/quill.min.js') }}"></script>
+  <script src="{{ secure_asset('js/quill.min.js') }}"></script>
 
 
   <script src="{{ secure_asset('assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
