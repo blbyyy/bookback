@@ -35,11 +35,11 @@ class DashboardController extends Controller
         ->whereDate('due_date', Carbon::today())
         ->where('status', '!=', 'Book Returned')
         ->count();
-
+        
         $transactionsPerDay = DB::table('book_transaction')
         ->select(DB::raw('DATE(book_borrowing_date) as date'), DB::raw('count(*) as count'))
         ->groupBy(DB::raw('DATE(book_borrowing_date)'))
-        ->orderBy('book_borrowing_date')
+        ->orderBy('date') 
         ->get();
 
         $transactionsPerWeek = DB::table('book_transaction')
