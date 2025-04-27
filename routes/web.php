@@ -31,6 +31,8 @@ Route::post('/signout', [HomeController::class, 'perform'])->name('signout');
 
 Route::post('/notification/is-read', [AdminController::class, 'markAsRead'])->name('notification');
 
+Route::get('/borrower/register-page', [BorrowerController::class, 'register_page'])->name('register.page');
+
 //START ADMIN/LIBRARIAN ROUTES
 Route::middleware(['auth', 'is.librarian'])->group(function () {
 
@@ -105,8 +107,6 @@ Route::middleware(['auth', 'is.librarian'])->group(function () {
 Route::middleware(['auth', 'is.borrower'])->group(function () {
 
     Route::get('/book-list', [BookController::class, 'book_list_index'])->name('book.list.index.page');
-
-    Route::get('/borrower/register-page', [BorrowerController::class, 'register_page'])->name('register.page');
 
     Route::post('/borrower/registered', [BorrowerController::class, 'register'])->name('borrower-registered');
 
