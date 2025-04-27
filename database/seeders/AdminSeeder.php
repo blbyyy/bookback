@@ -17,7 +17,7 @@ class AdminSeeder extends Seeder
         $user = new User;
         $user->name = 'Librarian';
         $user->role = 'Librarian';
-        $user->email = 'bookback@gmail.com';
+        $user->email = 'bookbackonline@gmail.com';
         $user->password = bcrypt('password');
         $user->save();
 
