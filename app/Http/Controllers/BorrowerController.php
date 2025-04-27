@@ -68,21 +68,30 @@ class BorrowerController extends Controller
 
     public function change_avatar(Request $request)
     {
-        $borrowers = DB::table('borrowers')
-        ->select('borrowers.id')
-        ->where('user_id',Auth::id())
-        ->first();
+        // Validate the uploaded image (max 2MB)
+        $request->validate([
+            'avatar' => 'required|image|max:2048', // 2048 KB = 2MB
+        ]);
 
-        $borrower = Borrower::find($borrowers->id);
-        $files = $request->file('avatar');
-        $avatarFileName = time().'-'.$files->getClientOriginalName();
-        Storage::put('public/avatars/'.time().'-'.$files->getClientOriginalName(), file_get_contents($files));
-        
+        // Get the borrower record
+        $borrower = Borrower::where('user_id', Auth::id())->firstOrFail();
+
+        // Handle the uploaded file
+        $file = $request->file('avatar');
+        $avatarFileName = time() . '-' . $file->getClientOriginalName();
+
+        // Store the file in 'public/avatars' (storage/app/public/avatars)
+        $file->storeAs('public/avatars', $avatarFileName);
+
+        // Update borrower avatar path
         $borrower->avatar = $avatarFileName;
         $borrower->save();
 
-        return redirect()->to('/borrower/profile/{id}')->with('success', 'Avatar changed successfully.');
+        // Redirect to the borrower's profile page (dynamic ID)
+        return redirect()->to('/borrower/profile/' . $borrower->id)
+                        ->with('success', 'Avatar changed successfully.');
     }
+
 
     public function update_profile(Request $request, $id)
     {
