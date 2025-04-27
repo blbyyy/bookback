@@ -318,16 +318,16 @@
   <script src="{{ asset('assets/js/main.js')}}"></script>
   <script src="{{ asset('js/custom.js')}}"></script>
 
-  <script src="{{ secure_asset('../assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
-  <script src="{{ secure_asset('../assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{ secure_asset('../assets/vendor/chart.js/chart.umd.js')}}"></script>
-  <script src="{{ secure_asset('../assets/vendor/echarts/echarts.min.js')}}"></script>
-  <script src="{{ secure_asset('../assets/vendor/quill/quill.min.js')}}"></script>
-  <script src="{{ secure_asset('../assets/vendor/simple-datatables/simple-datatables.js')}}"></script>
-  <script src="{{ secure_asset('../assets/vendor/tinymce/tinymce.min.js')}}"></script>
-  <script src="{{ secure_asset('../assets/vendor/php-email-form/validate.js')}}"></script>
-  <script src="{{ secure_asset('../js/custom.js')}}"></script>
-  <script src="{{ secure_asset('../assets/js/main.js')}}"></script>
+  <script src="{{ secure_asset('assets/vendor/apexcharts/apexcharts.min.js')}}"></script>
+  <script src="{{ secure_asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ secure_asset('assets/vendor/chart.js/chart.umd.js')}}"></script>
+  <script src="{{ secure_asset('assets/vendor/echarts/echarts.min.js')}}"></script>
+  <script src="{{ secure_asset('assets/vendor/quill/quill.min.js')}}"></script>
+  <script src="{{ secure_asset('assets/vendor/simple-datatables/simple-datatables.js')}}"></script>
+  <script src="{{ secure_asset('assets/vendor/tinymce/tinymce.min.js')}}"></script>
+  <script src="{{ secure_asset('assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ secure_asset('js/custom.js')}}"></script>
+  <script src="{{ secure_asset('assets/js/main.js')}}"></script>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
