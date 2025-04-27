@@ -92,7 +92,6 @@ class BorrowerController extends Controller
                         ->with('success', 'Avatar changed successfully.');
     }
 
-
     public function update_profile(Request $request, $id)
     {
         $user = DB::table('borrowers')
