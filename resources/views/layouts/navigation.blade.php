@@ -41,7 +41,7 @@
     <link href="{{ secure_asset('assets/css/style.css') }}" rel="stylesheet">
     
     <!-- Corrected Favicon Link -->
-    <link rel="icon" href="{{ secure_asset('assets/img/favicon.png') }}" type="image/png">    
+    {{-- <link rel="icon" href="{{ secure_asset('assets/img/favicon.png') }}" type="image/png">     --}}
 
   <!-- Template Main CSS File -->
     
