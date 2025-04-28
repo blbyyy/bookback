@@ -98,8 +98,6 @@ class BookController extends Controller
 
     public function bookdelete(string $id)
     {
-        BookPhotos::where('book_id', $id)->delete();
-
         $book = Book::findOrFail($id);
         $book->delete();
 
