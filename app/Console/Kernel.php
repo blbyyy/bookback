@@ -12,8 +12,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->command('books:notify-due')->daily();
-        $schedule->command('reminder:due-books')->dailyAt('06:00');
+        $schedule->command('books:notify-due')->everyMinute();
+        $schedule->command('reminder:due-books')->everyMinute();
     }
 
     /**
