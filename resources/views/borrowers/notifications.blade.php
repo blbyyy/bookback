@@ -1,6 +1,6 @@
 @extends('layouts.navigation')
-<link href="assets/img/bookback.png" rel="icon">
-<link href="assets/img/bookback.png" rel="apple-touch-icon">
+<link href="{{ asset('assets/img/bookback.png') }}" rel="icon">
+<link href="{{ asset('assets/img/bookback.png') }}" rel="apple-touch-icon">
 <main id="main" class="main">
 
     <div class="pagetitle">

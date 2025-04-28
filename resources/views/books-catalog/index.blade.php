@@ -1,8 +1,8 @@
 @extends('layouts.navigation')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<link href="/assets/img/bookback.png" rel="icon">
-<link href="/assets/img/bookback.png" rel="apple-touch-icon">
+<link href="{{ asset('assets/img/bookback.png') }}" rel="icon">
+<link href="{{ asset('assets/img/bookback.png') }}" rel="apple-touch-icon">
 <style>
   .carousel-inner img {
     width: 400px;

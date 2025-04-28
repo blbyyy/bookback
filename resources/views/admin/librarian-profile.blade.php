@@ -1,7 +1,7 @@
 @extends('layouts.navigation')
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<link href="/assets/img/bookback.png" rel="icon">
-<link href="/assets/img/bookback.png" rel="apple-touch-icon">
+<link href="{{ asset('assets/img/bookback.png') }}" rel="icon">
+<link href="{{ asset('assets/img/bookback.png') }}" rel="apple-touch-icon">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <main id="main" class="main">
 
