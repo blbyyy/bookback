@@ -588,11 +588,11 @@ $(document).ready(function () {
     
                 $('#nameBorrower').text(data.name);
                 $('#emailBorrower').text(data.email);
-                $('#roleBorrower').text(data.address);
-                $('#addressBorrower').text(data.birthdate);
-                $('#phoneBorrower').text(data.age);
-                $('#birthdateBorrower').text(data.sex);
-                $('#ageBorrower').text(data.phone);
+                $('#roleBorrower').text(data.role);
+                $('#addressBorrower').text(data.address);
+                $('#phoneBorrower').text(data.phone);
+                $('#birthdateBorrower').text(data.birthdate);
+                $('#ageBorrower').text(data.age);
                 $('#sexBorrower').text(data.sex);
     
             },
