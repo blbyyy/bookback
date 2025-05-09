@@ -86,11 +86,20 @@ class BookController extends Controller
 
     public function updatebookinfo(Request $request, $id)
     {
+        $request->validate([
+            'bookPhoto' => 'required|image|max:5048', 
+        ]);
+
         $book = Book::find($id);
         $book->title = $request->bookTitle; 
         $book->category = $request->bookCategory;
         $book->author = $request->bookAuthor;
         $book->summary = $request->bookSummary;
+
+        $files = $request->file('bookPhoto');
+        $bookPhotoFileName = time().'-'.$files->getClientOriginalName();
+        Storage::put('public/bookPhotos/'.time().'-'.$files->getClientOriginalName(), file_get_contents($files));
+        $book->img_path = $bookPhotoFileName;
         $book->save();
 
         return response()->json($book);
@@ -130,6 +139,7 @@ class BookController extends Controller
 
         $borrowerNotification = DB::table('notifications')
             ->where('type', 'Borrower Notification')
+            ->where('reciever_id',Auth::id())
             ->orderBy('date', 'desc')
             ->take(4)
             ->get();

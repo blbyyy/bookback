@@ -59,6 +59,7 @@ class BorrowerController extends Controller
 
         $borrowerNotification = DB::table('notifications')
             ->where('type', 'Borrower Notification')
+            ->where('reciever_id',Auth::id())
             ->orderBy('date', 'desc')
             ->take(4)
             ->get();
@@ -70,7 +71,7 @@ class BorrowerController extends Controller
     {
         // Validate the uploaded image (max 2MB)
         $request->validate([
-            'avatar' => 'required|image|max:2048', // 2048 KB = 2MB
+            'avatar' => 'required|image|max:5048', // 2048 KB = 2MB
         ]);
 
         // Get the borrower record
@@ -173,6 +174,7 @@ class BorrowerController extends Controller
 
         $borrowerNotification = DB::table('notifications')
             ->where('type', 'Borrower Notification')
+            ->where('reciever_id',Auth::id())
             ->orderBy('date', 'desc')
             ->take(4)
             ->get();
@@ -219,6 +221,7 @@ class BorrowerController extends Controller
 
         $borrowerNotification = DB::table('notifications')
             ->where('type', 'Borrower Notification')
+            ->where('reciever_id',Auth::id())
             ->orderBy('date', 'desc')
             ->take(4)
             ->get();

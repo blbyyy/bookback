@@ -212,6 +212,13 @@
                                   <label for="bookSummary">Book Summarry/Description</label>
                                 </div>
                             </div>
+
+                            <div class="col-md-12">
+                              <div class="form-floating">
+                                <input type="file" name="bookPhoto" class="form-control" id="bookPhoto" placeholder="Book Photo">
+                                <label for="bookPhoto">Book Photo</label>
+                              </div>
+                            </div>
                            
                             <div class="col-12" style="padding-top: 20px">
                               <div class="d-flex justify-content-end">

@@ -247,7 +247,7 @@
           <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
               <a href="{{url('/admin/borrower-list')}}">
-                <i class="bi bi-circle"></i><span>Barrowers</span>
+                <i class="bi bi-circle"></i><span>Borrowers</span>
               </a>
             </li>
             <li>
