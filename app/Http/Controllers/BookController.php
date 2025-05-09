@@ -134,6 +134,7 @@ class BookController extends Controller
 
         $borrowerNotifCount = DB::table('notifications')
             ->where('type', 'Borrower Notification')
+            ->where('reciever_id',Auth::id())
             ->where('status', 'not read')
             ->count();
 

@@ -55,6 +55,7 @@ class BorrowerController extends Controller
         $borrowerNotifCount = DB::table('notifications')
             ->where('type', 'Borrower Notification')
             ->where('status', 'not read')
+            ->where('reciever_id',Auth::id())
             ->count();
 
         $borrowerNotification = DB::table('notifications')
@@ -169,6 +170,7 @@ class BorrowerController extends Controller
 
         $borrowerNotifCount = DB::table('notifications')
             ->where('type', 'Borrower Notification')
+            ->where('reciever_id',Auth::id())
             ->where('status', 'not read')
             ->count();
 
